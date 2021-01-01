@@ -4,26 +4,13 @@
 
 <img src="logo.png" width="156" height="156">
 
-An elegant Go/Baduk/Weiqi board and SGF editor for a more civilized age. [Download the latest release](https://github.com/SabakiHQ/Sabaki/releases) of Sabaki.
-
-**This is the web version of Sabaki.** It's a trimmed-down version that runs in any modern browser. Build instructions can be found in [the documentation](https://github.com/yishn/Sabaki/blob/master/docs/guides/building-tests.md). You can try a [working demo here](https://sabaki.yichuanshen.de/web).
+**Please checkout web branch** This is an enhancement for web version, incluing GTP-extention support, websocket connection and chart analysis. 
 
 ![Screenshot](screenshot.png)
 
 ## Features
 
-- Fuzzy stone placement
-- Read and save SGF games and collections
-- Open wBaduk NGF and Tygem GIB files
-- Display formatted SGF comments using a [subset of Markdown](https://github.com/SabakiHQ/Sabaki/blob/master/docs/guides/markdown.md)
-- SGF editing tools
-- Powerful undo/redo
-- Lines & arrows board markup
-- Copy & paste variations
-- Fast game tree
-- Score estimator & scoring tool
-- Find move by move position and comment text
-- Position & move annotations
+
 
 ## Documentation
 
@@ -40,22 +27,6 @@ See [Building & Tests](https://github.com/SabakiHQ/Sabaki/blob/master/docs/guide
 ## License
 
 This project is licensed under the [MIT license](https://github.com/SabakiHQ/Sabaki/blob/master/LICENSE.md).
-
-## Donators
-
-A big thank you to these lovely people:
-
-- Eric Wainwright
-- Michael Noll
-- John Hager
-- David Göbel
-- Dominik Olszewski
-- Philippe Fanaro
-- Andrew Thieman
-- Adrian Petrescu
-- Karlheinz Agsteiner
-- Sergio Villegas
-- Jake Pivnik
 
 ## Related
 
