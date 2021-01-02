@@ -1,89 +1,115 @@
 {
-  "name": "sabaki",
-  "productName": "Sabaki",
-  "version": "0.43.3",
-  "description": "An elegant Go/Baduk/Weiqi board and SGF editor for a more civilized age.",
-  "author": "Yichuan Shen <shen.yichuan@gmail.com>",
-  "homepage": "http://sabaki.yichuanshen.de",
-  "license": "MIT",
-  "main": "./src/main.js",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/SabakiHQ/Sabaki"
-  },
-  "bugs": {
-    "url": "https://github.com/SabakiHQ/Sabaki/issues"
-  },
-  "build": {
-    "appId": "de.yichuanshen.sabaki",
-    "copyright": "Copyright © 2015-2019 Yichuan Shen",
-    "compression": "normal",
-    "linux": {
-      "target": "AppImage",
-      "category": "Game"
+    "name": "sabaki",
+    "productName": "Sabaki",
+    "version": "0.43.3",
+    "description": "An elegant Go/Baduk/Weiqi board and SGF editor for a more civilized age.",
+    "author": "Yichuan Shen <shen.yichuan@gmail.com>",
+    "homepage": "http://sabaki.yichuanshen.de",
+    "license": "MIT",
+    "main": "./src/main.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/SabakiHQ/Sabaki"
     },
-    "mac": {
-      "category": "public.app-category.board-games",
-      "target": [
-        "7z"
-      ]
+    "bugs": {
+        "url": "https://github.com/SabakiHQ/Sabaki/issues"
     },
-    "nsis": {
-      "oneClick": false,
-      "perMachine": true,
-      "allowToChangeInstallationDirectory": true
+    "build": {
+        "appId": "de.yichuanshen.sabaki",
+        "copyright": "Copyright © 2015-2019 Yichuan Shen",
+        "compression": "normal",
+        "linux": {
+            "target": "AppImage",
+            "category": "Game"
+        },
+        "mac": {
+            "category": "public.app-category.board-games",
+            "target": [
+                "7z"
+            ]
+        },
+        "nsis": {
+            "oneClick": false,
+            "perMachine": true,
+            "allowToChangeInstallationDirectory": true
+        },
+        "fileAssociations": [
+            {
+                "ext": "sgf",
+                "name": "SGF",
+                "description": "Smart Game Format"
+            },
+            {
+                "ext": "ngf",
+                "name": "NGF",
+                "description": "wBaduk NGF"
+            },
+            {
+                "ext": "gib",
+                "name": "GIB",
+                "description": "Tygem GIB"
+            }
+        ],
+        "files": [
+            "**/*",
+            "bundle.js",
+            "!bundle.js.map",
+            "!**/{.c9,scss,docs,test,tests,devtools,plugins,examples}${/*}",
+            "!data/shapes.sgf",
+            "!src/components${/*}",
+            "!src/modules${/*}"
+        ]
     },
-    "fileAssociations": [
-      {
-        "ext": "sgf",
-        "name": "SGF",
-        "description": "Smart Game Format"
-      },
-      {
-        "ext": "ngf",
-        "name": "NGF",
-        "description": "wBaduk NGF"
-      },
-      {
-        "ext": "gib",
-        "name": "GIB",
-        "description": "Tygem GIB"
-      }
-    ],
-    "files": [
-      "**/*",
-      "bundle.js",
-      "!bundle.js.map",
-      "!**/{.c9,scss,docs,test,tests,devtools,plugins,examples}${/*}",
-      "!data/shapes.sgf",
-      "!src/components${/*}",
-      "!src/modules${/*}"
-    ]
-  },
-  "dependencies": {
-    "@sabaki/deadstones": "^2.1.1",
-    "@sabaki/immutable-gametree": "^1.7.2",
-    "@sabaki/influence": "^1.1.4",
-    "@sabaki/sgf": "^3.3.0",
-    "@sabaki/shudan": "^1.3.11",
-    "copy-text-to-clipboard": "^1.0.3",
-    "dolm": "^0.4.2-alpha",
-    "natsort": "^1.0.6",
-    "octicons": "^8.5.0",
-    "pikaday": "^1.8.0",
-    "preact": "^8.4.2",
-    "react-markdown": "^3.6.0",
-    "remark-breaks": "^1.0.1"
-  },
-  "devDependencies": {
-    "http-server": "^0.11.1",
-    "webpack": "^4.30.0",
-    "webpack-cli": "^3.3.2"
-  },
-  "scripts": {
-    "test": "",
-    "build": "webpack --mode production --progress",
-    "watch": "webpack --mode development --progress --watch",
-    "start": "http-server"
-  }
+    "dependencies": {
+        "@babel/polyfill": "^7.6.0",
+        "@sabaki/deadstones": "^2.1.1",
+        "@sabaki/immutable-gametree": "^1.7.2",
+        "@sabaki/influence": "^1.1.4",
+        "@sabaki/sgf": "^3.3.0",
+        "@sabaki/shudan": "^1.3.11",
+        "animate.css": "^4.1.1",
+        "autoprefixer": "^10.0.1",
+        "babel-core": "^6.26.3",
+        "babel-loader": "^8.0.6",
+        "bootstrap": "^4.5.3",
+        "copy-text-to-clipboard": "^1.0.3",
+        "dolm": "^0.4.2-alpha",
+        "html-webpack-plugin": "^3.2.0",
+        "koa-connect": "^2.0.1",
+        "lodash": "^4.17.15",
+        "natsort": "^1.0.6",
+        "octicons": "^8.5.0",
+        "pikaday": "^1.8.0",
+        "postcss": "^8.1.4",
+        "postcss-cli": "^8.1.0",
+        "postcss-loader": "^4.0.4",
+        "preact": "^8.4.2",
+        "react-markdown": "^3.6.0",
+        "remark-breaks": "^1.0.1",
+        "requirejs": "^2.3.6",
+        "url-loader": "^2.1.0",
+        "webpack-cli": "^3.3.9",
+        "webpack-dev-server": "^3.8.1"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.6.2",
+        "@babel/core": "^7.6.2",
+        "@babel/preset-env": "^7.6.2",
+        "css-loader": "^3.2.0",
+        "file-loader": "^4.2.0",
+        "html-loader": "^0.5.5",
+        "node-sass": "^4.12.0",
+        "sass-loader": "^8.0.0",
+        "style-loader": "^1.0.0",
+        "svg-inline-loader": "^0.8.0",
+        "webpack": "^4.41.0"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "webpack --mode production --progress",
+        "start": "webpack-dev-server --open --port 8080"
+    },
+    "browser": {
+        "fs": false
+    }
 }

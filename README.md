@@ -1,14 +1,6 @@
-# Sabaki Web has been deprecated!
+**This is an enhancement for web version, incluing GTP-extention support, websocket connection and chart analysis.**
 
-## Sabaki Web [![Build Status](https://travis-ci.org/SabakiHQ/Sabaki.svg?branch=master)](https://travis-ci.org/SabakiHQ/Sabaki) [![Donate](https://img.shields.io/badge/donate-paypal-blue.svg)](https://www.paypal.me/yishn/5)
-
-<img src="logo.png" width="156" height="156">
-
-**Please checkout web branch** This is an enhancement for web version, incluing GTP-extention support, websocket connection and chart analysis. 
-
-![Screenshot](screenshot.png)
-
-## Features
+## Changelog
 
 
 
